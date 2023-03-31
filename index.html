@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>El Barril Selecto</title>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Carlos Gacitua and Miguel Conejeros" content="description_index">
+    <meta name="description" content="La pagina entrega la informacion sobre la licoreria El Barril Selecto, sus productos como las diferentes opciones que tiene la tienda.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+	<link rel="stylesheet" href="../Botilleria_Covid/CSS/codigos.css">
+    <link rel="icon" type="image/x-icon" href="../Botilleria_Covid/IMAGES/icono.png">
+</head>
+<body>
+    <!-- Primeros elementos de la pagina -->
+    <!-- Barra de menu -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="../Botilleria_Covid/index.html"><img src="../Botilleria_Covid/IMAGES/icono.png" width="30" height="30" class="d-inline-block align-top" alt="">El Barril Selecto</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                <a class="nav-link" href="../Botilleria_Covid/index.html">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Botilleria_Covid/HTML/contacto.html">Contacto <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Botilleria_Covid/HTML/ofertas.html">Ofertas <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Botilleria_Covid/HTML/inicio_sesion.html">Inicio Sesión <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Botilleria_Covid/HTML/carrito.html">Carrito <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="../Botilleria_Covid/HTML/productos.html" role="button" data-toggle="dropdown" aria-expanded="false">
+                    Productos
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="../Botilleria_Covid/HTML/vinos.html">Vinos</a>
+                    <a class="dropdown-item" href="../Botilleria_Covid/HTML/whiskys.html">Whisky</a>
+                    <a class="dropdown-item" href="../Botilleria_Covid/HTML/cervesa.html">Cervesas</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="../Botilleria_Covid/HTML/productos.html">Todos los productos</a>
+                </div>
+                </li>
+            </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- Barra de menu -->
+	<b>
+		<!-- Titulo y encabezado de la pagina -->
+        <section id="hero">
+			<div class="container">
+				<h1 class="text-center font-weight-500">Bienvenidos a El Barril Selecto</h1>
+				<p class="text-center font-weight-300">Aquí encontrarás una gran variedad de vinos, whiskys, cervesas y mucho más.</p>
+				<!-- <a href="#" class="btn btn-primary">Explora nuestros productos</a> -->
+			</div>
+		</section>
+        <!-- Titulo y encabezado de la pagina -->
+
+        <!-- Carousel de la pagina principal -->
+        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+              <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../Botilleria_Covid/IMAGES/Imagen_portada1.jpg" class="d-block w-100" alt="...">
+                <!-- Luego agregar pagina para buscar este producto en especifico -->
+                <!-- Cambiar imagen para que se note la letra -->
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="font-weight-bold">Carignan, Odfjell, Orzada $13.900</h5>
+                  <p class="font-weight-bold">Este Carignan proviene de viñedos orgánicos y con manejo biodinámico del valle de Colchagua (Cauquenes). Fue vinificado con levaduras nativas y estuvo 12-14 meses de guarda en acero inoxidable. 
+                    Está certificado como vino vegano.Muestra una mezcla interminable de aromas como licor de cereza, regaliz, fruta blanca como albaricoques, melocotón blanco, peras y un toque de lichi.
+                </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <!-- Luego agregar pagina para buscar este producto en especifico -->
+                <!-- Cambiar imagen para que se note la letra -->
+                <img src="../Botilleria_Covid/IMAGES/Imagen_portada2.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="font-weight-bold">Semillón, Carmen DO $16.500</h5>
+                  <p class="font-weight-bold">Es un vino de nariz austera con aromas a miel, flores blancas, almendras y notas cítricas. En boca tiene gran textura siendo un vino redondo, cremoso con gran cuerpo y una acidez limpia que le aporta frescor y vibrancia.
+                    El vino fermentó con levaduras nativas en barricas de tercer uso y luego tuvo una guarda sobre sus borras durante 4 meses para aumentar el volumen en boca.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <!-- Luego agregar pagina para buscar este producto en especifico -->
+                <!-- Cambiar imagen para que se note la letra -->
+                <img src="../Botilleria_Covid/IMAGES/Imagen_portada3.png" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 class="font-weight-bold">Riesling, Sierras de Bellavista $15.000</h5>
+                  <p class="font-weight-bold">Sierras de Bellavista es un vino de autor que nace de viñedos ubicado sobre los 1.100 metros de altura en la Sierra de Colchagua, en medio de bosques y montañas.
+                    Con la convicción que las condiciones especiales de la Sierra darían un vino de carácter único se comenzó en el 2010 a plantar viñedos de Riesling a mil metros de altura para dar inicio al proyecto.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </button>
+        </div>
+        </section>
+    	<footer>
+            <div class="text-left font-weight-light">
+                <h3 class="font-weight-light">Contacto</h3>
+                <ul>
+                    <li><i class="fas fa-phone"></i> Número: +562 74398100</li>
+                    <li><i class="fas fa-envelope"></i> Correo: botillería@elbarrilselecto.cl</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Dirección: Miraflores 1032</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Horario: Lunes a Sabado de 10:00 a 17:00 hrs.</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Instagram: elbarrilselecto_pm</li>
+                </ul>
+            </div>
+		    <div class="text-right font-weight-light">
+    			<p>© 2023 Tienda de Botillería. Todos los derechos reservados.</p>
+	    	</div>
+	    </footer>
+    <!-- Scripts para Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    <!-- Scripts para Bootstrap -->
+</body>

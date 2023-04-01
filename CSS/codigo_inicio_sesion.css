@@ -1,0 +1,83 @@
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+  
+.form-group {
+    margin-bottom: 20px;
+}
+  
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+  
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+  
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+}
+  
+button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+.forgot-password,
+.create-account {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.forgot-password a,
+.create-account a {
+  color: blue;
+  text-decoration: underline;
+}
+
+.forgot-password a:hover,
+.create-account a:hover {
+  text-decoration: none;
+}
+
+h1 {
+    text-align: center;
+}
+
+a img {
+    display: block;
+    margin: 0 auto;
+    width: 110px;
+    max-width: 20%;
+    height: auto;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* ajustar el alto según sea necesario */
+}

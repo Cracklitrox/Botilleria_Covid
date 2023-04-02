@@ -1,0 +1,30 @@
+/* Importar fuente de letra */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans';
+}
+body{
+    background: linear-gradient(to right, #3e5151, #decba4);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.center-container{
+    width:  700px;
+    height: 530px;
+    background: rgb(242, 235, 235);
+    border-radius: 9px;
+    box-shadow: 0 0 40px -10px #948f8f;
+    margin: calc(39vh - 210px) auto;
+    padding: 1px 50px;
+    max-width: calc(100vw -30px);
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.title{
+    text-align: center;
+}
+footer {
+    position: relative;
+}

@@ -1,12 +1,137 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="Carlos Gacitua and Miguel Conejeros" content="description_contact">
+    <meta name="description" content="La pagina entrega un formulario para que el cliente envien un mensaje a la empresa.">
+    <!-- Importar codigo JS modificado -->
+    <script src="../JS/codigo_contacto.js" async></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/codigo_contacto.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="icon" type="image/x-icon" href="../IMAGES/icono.png">
+    <title>Contacto</title>
 </head>
 <body>
-    
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand" href="../index.html">
+              <img src="../IMAGES/icono.png" width="30" height="30" class="d-inline-block align-top" alt="">
+              El Barril Selecto
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+              <ul class="navbar-nav">
+                  <li class="nav-item active">
+                      <a class="nav-link" href="../index.html">Inicio <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="../HTML/contacto.html">Contacto <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="../HTML/inicio_sesion.html">Inicio Sesión <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="../HTML/carrito.html">Carrito <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                          Productos
+                      </a>
+                      <div class="dropdown-menu">
+                          <a class="dropdown-item" href="../HTML/vinos.html">Vinos</a>
+                          <a class="dropdown-item" href="../HTML/whiskys.html">Whisky</a>
+                          <a class="dropdown-item" href="../HTML/cervesa.html">Cervesas</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="../HTML/productos.html">Todos los productos</a>
+                      </div>
+                  </li>
+              </ul>
+              <ul class="navbar-nav">
+                  <!-- Agrega aquí cualquier elemento que desees añadir a la barra de navegación en el lado derecho -->
+              </ul>
+          </div>
+        </nav>    
+      </header>
+      <div class="center-container">
+        <h1 class="title">Contactanos</h1>
+        <!-- Arreglar error de "" en el <div> de abajo -->
+        <!-- Modificar posicionamientos de los elementos para verse mejor -->
+        <div class="class="modal-body modal-dialog"">
+            <form class="needs-validation" novalidate>
+                <div class="form-row">
+                  <div class="col-md-3 mb-3">
+                    <label for="validationCustom01">Nombre</label>
+                    <input type="text" class="form-control" id="validationCustom01" value="" required>
+                    <!-- Cambiar mensaje a español -->
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-3 ">
+                    <label for="validationCustom02">Apellido</label>
+                    <input type="text" class="form-control" id="validationCustom02" value="" required>
+                    <!-- Cambiar mensaje a español -->
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="col-md-3 mb-3">
+                    <label for="exampleInputEmail1">Correo Electronico</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <!-- Cambiar mensaje a español -->
+                    <div class="invalid-feedback">
+                      Please provide a valid city.
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <label for="validationCustom02">Telefono</label>
+                    <input type="text" class="form-control" id="validationCustom02" value="" required>
+                    <!-- Cambiar mensaje a español -->
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                  </div>
+                </div>
+                <div>
+                    <div class="mb-4">
+                        <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                      </div>
+                </div>
+                <button class="btn btn-primary" type="submit">Enviar</button>
+              </form>
+        </div>
+        <!-- Cambiar posicion de elementos, igual al index -->
+        <footer style="position: relative; padding-bottom: 130px;">
+            <div class="text-left font-weight-light" style="position: absolute; bottom: 0; left: 0; z-index: 1;">
+              <h3 class="font-weight-light"  style="color: #0d0d0d;">Contactos</h3>
+              <div style="display: flex; flex-wrap: wrap;">
+                <div style="flex-basis: 50%; margin-bottom: 10px;">
+                  <ul style="color: #050505; margin: 0;">
+                    <li><i class="bi bi-telephone"></i> Número: +562 74398100</li>
+                    <li><i class="bi bi-envelope"></i></i> Correo: botillería@elbarrilselecto.cl</li>
+                  </ul>
+                </div>
+                <div style="flex-basis: 50%; margin-bottom: 10px;">
+                  <ul style="color: #000000; margin: 0;">
+                    <li><i class="bi bi-geo-alt"></i> Dirección: Miraflores 1032</li>
+                    <li><i class="bi bi-clock"></i></i> Horario: Lunes a Sabado de 10:00 a 17:00 hrs.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>          
+          </footer>    
+      </div> 
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
 </body>
 </html>

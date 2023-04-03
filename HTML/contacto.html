@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Carlos Gacitua and Miguel Conejeros" content="description_contact">
     <meta name="description" content="La pagina entrega un formulario para que el cliente envien un mensaje a la empresa.">
-    <script src="../JS/codigo_contacto.js" async></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="../CSS/codigo_contacto.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
@@ -57,79 +56,70 @@
           </div>
         </nav>    
       </header>
-      <div class="center-container">
-        <h1 class="title">Contactanos</h1>
-        <!-- Arreglar error de "" en el <div> de abajo -->
-        <!-- Modificar posicionamientos de los elementos para verse mejor -->
-        <div class="class="modal-body modal-dialog"">
-            <form class="needs-validation" novalidate>
-                <div class="form-row">
-                  <div class="col-md-3 mb-3">
-                    <label for="validationCustom01">Nombre</label>
-                    <input type="text" class="form-control" id="validationCustom01" value="" required>
-                    <!-- Cambiar mensaje a español -->
-                    <div class="valid-feedback">
-                      Looks good!
-                    </div>
-                  </div>
-                  <div class="col-md-3 mb-3 ">
-                    <label for="validationCustom02">Apellido</label>
-                    <input type="text" class="form-control" id="validationCustom02" value="" required>
-                    <!-- Cambiar mensaje a español -->
-                    <div class="valid-feedback">
-                      Looks good!
-                    </div>
-                  </div>
-                </div>
-                <div class="form-row">
-                  <div class="col-md-3 mb-3">
-                    <label for="exampleInputEmail1">Correo Electronico</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    <!-- Cambiar mensaje a español -->
-                    <div class="invalid-feedback">
-                      Please provide a valid city.
-                    </div>
-                  </div>
-                  <div class="col-md-3 mb-3">
-                    <label for="validationCustom02">Telefono</label>
-                    <input type="text" class="form-control" id="validationCustom02" value="" required>
-                    <!-- Cambiar mensaje a español -->
-                    <div class="valid-feedback">
-                      Looks good!
-                    </div>
-                  </div>
-                </div>
-                <div>
-                    <div class="mb-4">
-                        <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                      </div>
-                </div>
-                <button class="btn btn-primary" type="submit">Enviar</button>
-              </form>
+      <div class="container">
+        <h1>Formulario de Contacto</h1>
+        <form id="contact-form" method="post" action="#">
+          <div class="form-group">
+            <label for="name">Nombre completo:</label>
+            <input type="text" class="form-control" id="name" name="name" required pattern="[a-zA-Z\s]+" title="Ingresa un nombre válido (solo letras y espacios)">
+            <div class="valid-feedback">¡Campo válido!</div>
+            <div class="invalid-feedback">Ingresa un nombre válido (solo letras y espacios)</div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+            <div class="valid-feedback">¡Campo válido!</div>
+            <div class="invalid-feedback">Ingresa un email válido (ejemplo: nombre@dominio.com)</div>
+          </div>
+          <div class="form-group">
+            <label for="phone">Teléfono:</label>
+            <input type="tel" class="form-control" id="phone" name="phone" required pattern="[0-9]{9}" title="Ingresa un número de teléfono válido (9 dígitos)">
+            <div class="valid-feedback">¡Campo válido!</div>
+            <div class="invalid-feedback">Ingresa un número de teléfono válido (9 dígitos)</div>
+          </div>
+          <div class="form-group">
+            <label for="city">Ciudad:</label>
+            <input type="text" class="form-control" id="city" name="city" required>
+            <div class="valid-feedback">¡Campo válido!</div>
+            <div class="invalid-feedback">Ingresa una ciudad válida (solo letras y espacios)</div>
+          </div>
+          <div class="form-group">
+            <label for="message">Mensaje:</label>
+            <textarea class="form-control" id="message" name="message" rows="5"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+      </div>
+      <!-- Pie de Pagina -->
+      <footer>
+        <div class="footer-container">
+          <div class="footer-about">
+            <h3>Acerca de nosotros</h3>
+            <p>Somos una tienda de licores especializada en ofrecer las mejores marcas del mercado, con un servicio personalizado y atención al cliente de calidad.</p>
+          </div>
+          <div class="footer-contact">
+            <h3>Contacto</h3>
+            <ul>
+              <li><i class="bi bi-telephone"></i> Número: +562 74398100</li>
+              <li><i class="bi bi-envelope"></i> Correo: botillería@elbarrilselecto.cl</li>
+              <li><i class="bi bi-geo-alt"></i> Dirección: Miraflores 1032</li>
+              <li><i class="bi bi-clock"></i> Horario: Lunes a Sabado de 10:00 a 17:00 hrs.</li>
+            </ul>
+          </div>
+          <div class="footer-social">
+            <h3>Síguenos en redes sociales</h3>
+            <ul>
+              <li><a href="https://www.facebook.com/"><i class="bi bi-facebook"></i> Facebook</a></li>
+              <li><a href="https://twitter.com/?lang=es"><i class="bi bi-twitter"></i> Twitter</a></li>
+              <li><a href="https://www.instagram.com/"><i class="bi bi-instagram"></i> Instagram</a></li>
+            </ul>
+          </div>
         </div>
-        <!-- Cambiar posicion de elementos, igual al index -->
-        <footer style="position: relative; padding-bottom: 130px;">
-            <div class="text-left font-weight-light" style="position: absolute; bottom: 0; left: 0; z-index: 1;">
-              <h3 class="font-weight-light"  style="color: #0d0d0d;">Contactos</h3>
-              <div style="display: flex; flex-wrap: wrap;">
-                <div style="flex-basis: 50%; margin-bottom: 10px;">
-                  <ul style="color: #050505; margin: 0;">
-                    <li><i class="bi bi-telephone"></i> Número: +562 74398100</li>
-                    <li><i class="bi bi-envelope"></i></i> Correo: botillería@elbarrilselecto.cl</li>
-                  </ul>
-                </div>
-                <div style="flex-basis: 50%; margin-bottom: 10px;">
-                  <ul style="color: #000000; margin: 0;">
-                    <li><i class="bi bi-geo-alt"></i> Dirección: Miraflores 1032</li>
-                    <li><i class="bi bi-clock"></i></i> Horario: Lunes a Sabado de 10:00 a 17:00 hrs.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>          
-          </footer>    
-      </div> 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script></body>
+        <div class="footer-bottom">
+          <p>© 2023 Tienda de Botillería. Todos los derechos reservados.</p>
+        </div>
+      </footer>
+      <!-- Pie de Pagina -->
+      <!-- Agregamos el enlace al archivo JavaScript de Bootstrap -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>    
 </html>

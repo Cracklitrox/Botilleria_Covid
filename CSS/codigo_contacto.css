@@ -1,36 +1,16 @@
 /* Importar fuente de letra */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap');
-body{
-    background: linear-gradient(to right, #3e5151, #decba4);
-    font-family: Arial, Helvetica, sans-serif;
-}
-.center-container{
-    width:  700px;
-    height: 530px;
-    background: rgb(242, 235, 235);
-    border-radius: 9px;
-    box-shadow: 0 0 40px -10px #948f8f;
-    margin: calc(39vh - 210px) auto;
-    padding: 1px 50px;
-    max-width: calc(100vw -30px);
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.title{
-    text-align: center;
-}
+/* Importar fuente de letra */
 
-
-
+/* Fuente de Letra */
 *{
     margin: 0;
     padding: 0;
     font-family: 'Open Sans';
 }
-body{
-    background: linear-gradient(to right, #3e5151, #decba4);
-    font-family: Arial, Helvetica, sans-serif;
-}
+/* Fuente de Letra */
+
+/* Estilos personalizados */
 .center-container{
     width:  700px;
     height: 530px;
@@ -43,9 +23,180 @@ body{
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 .title{
     text-align: center;
 }
-footer {
-    position: relative;
+
+body{
+    background: linear-gradient(to right, #3e5151, #decba4);
+    background-color: #f8f9fa;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+.center-container{
+    width:  700px;
+    height: 530px;
+    background: rgb(242, 235, 235);
+    border-radius: 9px;
+    box-shadow: 0 0 40px -10px #948f8f;
+    margin: calc(39vh - 210px) auto;
+    padding: 1px 50px;
+    max-width: calc(100vw -30px);
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    margin-top: 50px;
+}
+/* Estilos personalizados */
+
+/* Formulario */
+.form-group label {
+    font-weight: bold;
+}
+
+.form-group .valid-feedback,.form-group .invalid-feedback {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Validacion del Formulario */
+.form-group .valid-feedback {
+    color: #28a745;
+}
+
+/* Invalidacion del Formulario */
+.form-group .invalid-feedback {
+    color: #dc3545;
+}
+
+/* Validacion del Formulario */
+.form-group input:valid,.form-group textarea:valid {
+    border-color: #28a745;
+}
+
+/* Invalidacion del Formulario */
+.form-group input:invalid,.form-group textarea:invalid {
+    border-color: #dc3545;
+}  
+
+.form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+/* Formulario */
+
+/* Estilos boton Enviar */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+  
+.btn-primary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+  
+.btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+  
+.btn-primary:active {
+    background-color: #0062cc;
+    border-color: #005cbf;
+}
+  
+.btn-primary:active:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+  
+.btn-primary:active:hover {
+    background-color: #005cbf;
+    border-color: #0056b3;
+}
+/* Estilos boton Enviar */
+
+/* Estilos Pie de Pagina */
+footer {
+    background-color: #212529;
+    color: #fff;
+    padding: 60px 0;
+}
+  
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+  
+.footer-about,.footer-contact,.footer-social {
+    flex-basis: 30%;
+    margin-bottom: 30px;
+}
+  
+.footer-about h3,.footer-contact h3,.footer-social h3 {
+    margin-bottom: 20px;
+}
+  
+.footer-contact ul {
+    list-style: none;
+    padding: 0;
+}
+  
+.footer-contact li {
+    margin-bottom: 10px;
+}
+  
+.footer-contact li i {
+    margin-right: 10px;
+}
+  
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+  
+.footer-social li {
+    margin-right: 20px;
+}
+  
+.footer-social li:last-child {
+    margin-right: 0;
+}
+  
+.footer-social a {
+    color: #fff;
+}
+  
+.footer-social a:hover {
+    color: #f8f9fa;
+}
+  
+.footer-bottom {
+    background-color: #343a40;
+    padding: 15px 0;
+    text-align: center;
+}
+  
+.footer-bottom p {
+    margin: 0;
+}  
+
+@media (max-width: 767.98px) {
+    footer {
+      text-align: center;
+    }
+    
+    footer .row {
+      margin-bottom: 20px;
+    }
+    
+    footer h3 {
+      margin-top: 20px;
+    }
+}
+/* Estilos Pie de Pagina */

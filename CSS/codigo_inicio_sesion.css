@@ -1,3 +1,4 @@
+/* Estilos del formulario */
 form {
     max-width: 400px;
     margin: 0 auto;
@@ -11,7 +12,9 @@ form {
 .form-group {
     margin-bottom: 20px;
 }
-  
+/* Estilos del formulario */
+
+/* Estilos de los elementos dentro del formulario */
 label {
     display: block;
     margin-bottom: 5px;
@@ -43,23 +46,22 @@ button[type="submit"]:hover {
     background-color: #218838;
 }
 
-.forgot-password,
-.create-account {
+.forgot-password,.create-account {
   margin-top: 10px;
   text-align: center;
 }
 
-.forgot-password a,
-.create-account a {
+.forgot-password a,.create-account a {
   color: blue;
   text-decoration: underline;
 }
 
-.forgot-password a:hover,
-.create-account a:hover {
+.forgot-password a:hover,.create-account a:hover {
   text-decoration: none;
 }
+/* Estilos de los elementos dentro del formulario */
 
+/* Estilos de las clases de la pagina HTML */
 h1 {
     text-align: center;
 }
@@ -79,5 +81,6 @@ a img {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* ajustar el alto según sea necesario */
+    height: 100vh;
 }
+/* Estilos de las clases de la pagina HTML */

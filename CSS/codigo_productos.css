@@ -1,17 +1,21 @@
 /* Importar fuente de letra */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap');
+/* Importar fuente de letra */
 
-body{
-    background: #e9d362;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #333333, #e9d362);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #333333, #e9d362); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
+/* Aplicar fuente de letra */
 *{
     margin: 0;
     padding: 0;
     font-family: 'Open Sans';
 }
-/* Importar imagen de header */
+/* Aplicar fuente de letra */
+
+/* Estilos personalizados */
+body{
+    background: #e9d362;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #333333, #e9d362);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #333333, #e9d362); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 header{
     background: url(../IMAGES/portada_todos_productos.webp);
     background-size: cover;
@@ -27,6 +31,8 @@ header h1{
     color: #fff;
     padding: 30px;
 }
+/* Estilos personalizados */
+
 /* Seccion de Productos */
 .container{
     max-width: 1200px;
@@ -36,16 +42,18 @@ header h1{
     justify-content: space-between;
     contain: paint;
 }
+
 .container-items {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(50%, 200px), 1fr));
     grid-gap: 30px;
     grid-auto-rows: auto;
     justify-items: center;
-    grid-auto-flow: row; /* Agrega esta línea */
+    grid-auto-flow: row;
     width: 100%;
     transition: .3s;
-}  
+}
+
 .container .container-items .item{
     max-width: 200px;
     padding: 10px;
@@ -55,25 +63,30 @@ header h1{
     padding: 20px;
     transition:.3s;
 }
+
 .container-items .item:hover{
     box-shadow: 0 0 10px #666;
     scale: 1.05;
 }
+
 .container-items .item .img-item{
     width: 100%;
 }
+
 .container-items .item .tittle-item{
     display: block;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
 }
+
 .container-items .item .price-item{
     display: block;
     text-align: center;
     font-weight: bold;
     font-size: 22px;
 }
+
 .container-items .item .button-item{
     display: block;
     margin: 10px auto;
@@ -84,6 +97,8 @@ header h1{
     border-radius: 5px;
     cursor: pointer;
 }
+/* Seccion de Productos */
+
 /* Seccion del Carrito */
 .shipping{
     border: 1px solid #666;
@@ -98,12 +113,14 @@ header h1{
     opacity: 0;
     margin-right: -100%;
 }
+
 .shipping .header-Shopping{
     background-color: #000;
     color: #fff;
     text-align: center;
     padding: 30px 0;
 }
+
 .shipping .shipping-item{
     display: flex;
     align-items: center;
@@ -111,19 +128,23 @@ header h1{
     border-bottom: 1px solid #666;
     padding: 20px;
 }
+
 .shipping .shipping-item img{
     margin-right: 20px;
 }
+
 .shipping .shipping-item .shipping-item-tittle{
     display: block;
     font-weight: bold;
     margin-bottom: 10px;
     text-transform: uppercase;
 }
+
 .shipping .shipping-item .selector-quantity{
     display: inline-block;
     margin-right: 25px;
 }
+
 .shipping .shipping-item .shipping-item-details .selector-quantity .shipping-item-quantity{
     border: none;
     font-size: 18px;
@@ -133,6 +154,7 @@ header h1{
     padding: 5px;
     text-align: center;
 }
+
 .shipping .shipping-item .shipping-item-details .selector-quantity i{
     font-size: 18px;
     width: 32px;
@@ -143,12 +165,14 @@ header h1{
     border: 1px solid #000;
     cursor: pointer;
 }
+
 .shipping .shipping-item .shipping-item-details .shipping-item-price {
     font-weight: bold;
     display: inline-block;
     font-size: 18px;
     margin-bottom: 5px;
 }
+
 .shipping .shipping-item .btn-eliminate {
     position: absolute;
     right: 15px;
@@ -165,13 +189,16 @@ header h1{
     background: transparent;
     z-index: 20;
 }
+
 .shipping .shipping-item .btn-eliminate i{
     pointer-events: none;
 }
+
 .shipping .total-cart {
     background-color: #b8b5b5;
     padding: 30px;    
 }
+
 .shipping .total-cart .row{
     display: flex;
     justify-content: space-between;
@@ -180,6 +207,7 @@ header h1{
     font-weight: bold;
     margin-bottom: 10px;
 }
+
 .shipping .total-cart .btn-pay{
     display: block;
     width: 100%;
@@ -195,9 +223,12 @@ header h1{
     cursor: pointer;
     transition: .3s;
 }
+
 .shipping .total-cart .btn-pay:hover{
     scale: 1.05;
 }
+/* Seccion del Carrito */
+
 /* Seccion para eviter errores al minimizar la pantalla */
 @media screen and (max-width: 850px) {
     .container {
@@ -210,3 +241,4 @@ header h1{
         width: 100%;
     }
 }
+/* Seccion para eviter errores al minimizar la pantalla */

@@ -242,3 +242,84 @@ header h1{
     }
 }
 /* Seccion para eviter errores al minimizar la pantalla */
+
+/* Estilos Pie de Pagina */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
+}
+  
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+  
+.footer-about {
+    flex-basis: 30%;
+    margin-bottom: 20px;
+}
+  
+.footer-contact {
+    flex-basis: 30%;
+    margin-bottom: 20px;
+}
+  
+.footer-social {
+    flex-basis: 30%;
+    margin-bottom: 20px;
+}
+  
+.footer-contact ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+  
+.footer-contact li {
+    margin-bottom: 10px;
+}
+  
+.footer-social ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+  
+.footer-social li {
+    margin-bottom: 10px;
+}
+  
+.footer-social a {
+    color: #fff;
+    text-decoration: none;
+}
+  
+.footer-bottom {
+    margin-top: 50px;
+    text-align: center;
+}
+  
+.footer-bottom p {
+    margin: 0;
+}
+  
+.footer-bottom a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+  
+.footer-bottom a:hover {
+    color: #8e8e8e;
+}
+  
+@media only screen and (max-width: 768px) {
+    footer {
+      padding-bottom: 120px;
+    }
+}
+/* Estilos Pie de Pagina */

@@ -76,16 +76,17 @@ label {
     box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.3);
 }
 
-input[type="text"],input[type="password"],input[type="submit"] {
+input[type="text"],input[type="submit"] {
     border: 1px solid #d1d5da;
     border-radius: 3px;
     font-size: 16px;
     padding: 12px;
     width: 100%;
     margin-bottom: 16px;
+    margin-top: 10px;
 }
 
-input[type="text"],input[type="password"] {
+input[type="text"]{
     height: 44px;
 }
 
@@ -137,69 +138,20 @@ input[type="submit"]:hover {
     margin-right: 2px;
 }
 
-.dropdown-menu {
-    background-color: #f6f8fa;
-    border: none;
-    border-radius: 3px;
-    box-shadow: 0 8px 24px rgba(149, 157, 165, 0.2);
-    padding: 12px;
-    margin-top: 2px;
-    font-size: 14px;
-    text-align: left;
-    min-width: 200px;
-}
-    
-.dropdown-item {
-    display: block;
-    width: 100%;
-    clear: both;
-    font-weight: 400;
-    color: #24292e;
-    text-align: inherit;
-    white-space: nowrap;
-    background-color: transparent;
-    border: 0;
-}
-
-.dropdown-item:focus,.dropdown-item:hover {
-    color: #0366d6;
-    background-color: #f1f8ff;
-}
-/* Formulario */
-
-/* Estilos para etiquetas */
-#email,#password {
-    margin-top: 16px;
-}
-/* Estilos para etiquetas */
-
-/* Estilo del boton enviar */
-.btn-primary {
-    background-color: #2ea44f;
-    border: none;
-    border-radius: 6px;
-    color: #fff;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 600;
-    margin-top: 20px;
-    padding: 8px 16px;
-    text-align: center;
-    transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
-}
-
-.btn-primary:hover {
-    background-color: #2c974b;
-}
-/* Estilo del boton enviar */
-
-/* Estilos para la clase signup */
-.signup {
+.input.signup {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+/* Formulario */
 
+/* Estilo para la etiqueta */
+#email{
+    margin-top: 2px;
+}
+/* Estilo para la etiqueta */
+
+/* Estilos para la clase signup */
 .signup h1 {
     font-size: 24px;
     font-weight: 600;
@@ -225,7 +177,7 @@ input[type="submit"]:hover {
     display: block;
 }
 
-.signup input[type="text"],.signup input[type="password"] {
+.signup input[type="text"]{
     width: 100%;
     padding: 8px 12px;
     font-size: 14px;
@@ -233,7 +185,7 @@ input[type="submit"]:hover {
     border-radius: 3px;
     background-color: #fafbfc;
     line-height: 20px;
-}
+    }
 
 .signup button[type="submit"] {
     width: 100%;
@@ -292,6 +244,7 @@ input[type="submit"]:hover {
 .signup .terms a:hover {
     text-decoration: underline;
 }
+/* Estilos para la clase signup */
 
 /* Estilos Pie de Pagina */
 footer {

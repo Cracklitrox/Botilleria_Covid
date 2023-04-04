@@ -9,7 +9,6 @@ if(document.readyState =='loading'){
 }
 
 function ready(){
-
     // A travez de esta funcion agregaremos funcionalidad para los botones "eliminar" del carrito
     var botonesEliminarItem = document.getElementsByClassName('btn-eliminate');
     for(var i=0; i< botonesEliminarItem.length; i++){

@@ -1,10 +1,10 @@
-/* Aplicar estilos a todas las clases */
+/* Aplicar fuente de letra */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-/* Aplicar estilos a todas las clases */
+/* Aplicar fuente de letra */
 
 /* Estilos personalizados */
 body {
@@ -15,6 +15,13 @@ body {
     line-height: 1.5;
     color: #24292e;
     height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 h1 {
@@ -38,42 +45,15 @@ label {
     margin-bottom: 4px;
     display: block;
 }
-
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
 /* Estilos personalizados */
 
 /* Formulario */
 .form-container {
-    background-color: #fff;
-    border-radius: 3px;
-    border: 1px solid #eaecef;
-    padding: 24px;
-    width: 340px;
-}
-
-.form-control {
-    background-color: #fafbfc;
-    border: 1px solid #d1d5da;
-    border-radius: 3px;
-    box-shadow: none;
-    color: #24292e;
-    font-size: 16px;
-    line-height: 20px;
-    padding: 6px 8px;
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    width: 100%;
-    margin-top: 8px;
-}
-
-.form-control:focus {
-    border-color: #2188ff;
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.3);
+background-color: #fff;
+border-radius: 3px;
+border: 1px solid #eaecef;
+padding: 24px;
+width: 340px;
 }
 
 input[type="text"],input[type="password"],input[type="submit"] {
@@ -98,6 +78,26 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #269f42;
+}
+
+.form-control {
+    background-color: #fafbfc;
+    border: 1px solid #d1d5da;
+    border-radius: 3px;
+    box-shadow: none;
+    color: #24292e;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 6px 8px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    width: 100%;
+    margin-top: 8px;
+}
+
+.form-control:focus {
+    border-color: #2188ff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.3);
 }
 
 .input-group {
@@ -130,7 +130,7 @@ input[type="submit"]:hover {
 }
 
 .input-group > .input-group-btn > .btn:focus,.input-group > .input-group-btn > .btn:hover {
-    z-index: 4;
+z-index: 4;
 }
 
 .input-group-btn:not(:last-child) > .btn,.input-group-btn:not(:last-child) > .btn-group {
@@ -167,12 +167,6 @@ input[type="submit"]:hover {
 }
 /* Formulario */
 
-/* Estilos para etiquetas */
-#email,#password {
-    margin-top: 16px;
-}
-/* Estilos para etiquetas */
-
 /* Estilo del boton enviar */
 .btn-primary {
     background-color: #2ea44f;
@@ -192,6 +186,12 @@ input[type="submit"]:hover {
     background-color: #2c974b;
 }
 /* Estilo del boton enviar */
+
+/* Estilos para etiquetas */
+#email,#password {
+    margin-top: 16px;
+}
+/* Estilos para etiquetas */
 
 /* Estilos para la clase signup */
 .signup {
@@ -292,6 +292,7 @@ input[type="submit"]:hover {
 .signup .terms a:hover {
     text-decoration: underline;
 }
+/* Estilos para la clase signup */
 
 /* Estilos Pie de Pagina */
 footer {

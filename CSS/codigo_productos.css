@@ -12,25 +12,26 @@
 
 /* Estilos personalizados */
 body{
-    background: #e9d362;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #333333, #e9d362);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #333333, #e9d362); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #ffffff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffffff, #ffffff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffffff, #ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-header{
-    background: url(../IMAGES/portada_todos_productos.webp);
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-    border-radius: 25px;
-    overflow: hidden;
-    object-fit: cover;
+
+.clase_personalizada_img {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: auto;
+    max-height: 72000px;
+    min-height: 400px;
+    width: 100%;
 }
-header h1{
-    text-align: center;
-    font-size: 35px;
-    color: #fff;
-    padding: 30px;
-}
+  
+.clase_personalizada_img img {
+    max-width: 100%;
+    border: 1px solid black;
+    border-radius: 10px; /* Agrega un borde redondeado */
+}  
 /* Estilos personalizados */
 
 /* Seccion de Productos */
@@ -128,7 +129,7 @@ header h1{
     border-bottom: 1px solid #666;
     padding: 20px;
 }
-
+img-item
 .shipping .shipping-item img{
     margin-right: 20px;
 }

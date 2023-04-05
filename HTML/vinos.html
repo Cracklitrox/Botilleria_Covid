@@ -1,12 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Titulo de la pagina -->
+    <title>Vinos</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- Creadores y contenido de la pagina -->
+    <meta name="Carlos Gacitua and Miguel Conejeros" content="description_wines">
+    <!-- Descripcion de la pagina -->
+    <meta name="description" content="La pagina entrega la informacion sobre vinos de El Barril Selecto">
+    <!-- Enlace con archivo JS de la pagina actual -->
+    <script src="../JS/codigo_producto.js" async></script>
+    <!-- Enlace con archivo CSS de la pagina actual -->
+    <link rel="stylesheet" href="../CSS/codigo_productos.css">
+    <!-- Enlace con pagina Ajax 4.7.0 de la pagina actual -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!-- Enlace con pagina Bootstrap 5.3.0 de la pagina actual -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <!-- Enlace con pagina Bootstrap de icono para la pagina actual -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- Importacion del icono de la pagina actual -->
+    <link rel="icon" type="image/x-icon" href="../IMAGES/icono.png">
 </head>
 <body>
-    
+    <!-- Barra de menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="../index.html">
+            <img src="../IMAGES/icono.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            El Barril Selecto
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../index.html">Inicio <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../HTML/contacto.html">Contacto <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../HTML/inicio_sesion.html">Inicio Sesión <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                        Productos
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="../HTML/vinos.html">Vinos</a>
+                        <a class="dropdown-item" href="../HTML/whiskys.html">Whisky</a>
+                        <a class="dropdown-item" href="../HTML/cervesa.html">Cervesas</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="../HTML/productos.html">Todos los productos</a>
+                    </div>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <!-- Agrega aquí cualquier elemento que desees añadir a la barra de navegación en el lado derecho -->
+            </ul>
+        </div>
+    </nav>
+    <!-- Barra de menu -->
+    <!-- Carrosel de la pagina -->
+    <header>
+        <div id="carouselExampleFade" class="carousel slide carousel-fade">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="clase_personalizada_img">
+                  <a href="../HTML/vinos.html"><img src="../IMAGES/Imagen_Portada_Vinos.jpeg" class="d-block w-100" alt="..."></a>
+                </div>
+            </div>
+            <div class="carousel-item">
+              <div class="clase_personalizada_img">
+                <a href="../HTML/whiskys.html"><img src="../IMAGES/Imagen_Portada_Whisky.jpeg" class="d-block w-100" alt="..."></a>
+              </div>
+            </div>
+            <div class="carousel-item">
+                <div class="clase_personalizada_img" style="text-align: center;">
+                    <a href="../HTML/cervesa.html"><img src="../IMAGES/Imagen_Portada_Cervezas.jpeg" class="d-block w-75" style="margin: auto;" alt="..."></a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="clase_personalizada_img">
+                  <a href="../HTML/productos.html"><img src="../IMAGES/Imagen_Portada_Productos.jpeg" class="d-block w-100" alt="..."></a>
+                </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+    </header>
+    <!-- Carrosel de la pagina -->
+    <!-- Titulo y encabezado de la pagina -->
+    <!-- Titulo y encabezado de la pagina -->
+    <section class="container">
+        <!-- Elementos del contenedor -->
+        <div class="container-items">
+            <!-- VINOS 8 -->
+            <div class="item">
+                <span class="tittle-item">Vino Santa Ema Select Terroir Reserva Sauvignon Blanc 750cc</span>
+                <img src="../IMAGES/Vino_1.webp" alt="" class="img-item">
+                <span class="price-item">$3.490</span>
+                <button class="button-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="tittle-item">Vino 7 Colores Gran Reserva Pinot Noir 750cc</span>
+                <img src="../IMAGES/Vino_2.webp" alt="" class="img-item">
+                <span class="price-item">$4.190</span>
+                <button class="button-item">Agregar al Carrito</button>
+            </div>
+                <div class="item">
+                <span class="tittle-item">Vino Cousiño Macul Don Matías Gran Reserva Cabernet Sauvignon 750cc</span>
+                <img src="../IMAGES/Vino_3.webp" alt="" class="img-item">
+                <span class="price-item">$4.990</span>
+                <button class="button-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="tittle-item">Vino Santa Ema Select Terroir Reserva Sauvignon Blanc 750cc</span>
+                <img src="../IMAGES/Vino_4.webp" alt="" class="img-item">
+                <span class="price-item">$14.990</span>
+                <button class="button-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="tittle-item">Vino Casas del Bosque Gran Reserva Syrah 750cc</span>
+                <img src="../IMAGES/Vino_5.webp" alt="" class="img-item">
+                <span class="price-item">$8.990</span>
+                <button class="button-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="tittle-item">Vino Bestia Negra Cabernet Sauvignon 750cc</span>
+                <img src="../IMAGES/Vino_6.webp" alt="" class="img-item">
+                <span class="price-item">$6.990</span>
+                <button class="button-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="tittle-item">Vino Odfjell Orzada Carmenere 750cc</span>
+                <img src="../IMAGES/Vino_7.webp" alt="" class="img-item">
+                <span class="price-item">$9.990</span>
+                <button class="button-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="tittle-item">Vino Errazuriz Kai 750cc</span>
+                <img src="../IMAGES/Vino_9.webp" alt="" class="img-item">
+                <span class="price-item">$69.990</span>
+                <button class="button-item">Agregar al Carrito</button>
+            </div>
+            <!-- VINOS 8 -->
+        </div>
+        <!-- Elementos del contenedor -->
+        <!-- Carrito de Compras -->
+        <div class="shipping" id="shipping">
+            <div class="header-Shopping">
+                <h2>Tu Carrito</h2>
+            </div>
+            <!-- Productos de la pagina -->
+            <div class="shipping-items">
+                <!-- Productos del carrito de Ejemplo -->
+                <!-- 
+                <div class="shipping-item">
+                    <img src="../IMAGES/icono.png" alt="" width="80px">
+                    <div class="shipping-item-details">
+                        <span class="shipping-item-tittle">1 Item</span>
+                        <div class="selector-quantity">
+                            <i class="fa fa-minus subtract-amount"></i>
+                            <input type="text" value="1" class="shipping-item-quantity" disabled>
+                            <i class="fa fa-plus add-quantity"></i>
+                        </div>
+                        <span class="shipping-item-price">$25.000</span>
+                    </div>
+                    <span class="btn-eliminate">
+                        <i class="fa fa-trash eliminate"></i>
+                    </span>
+                </div>
+                <div class="shipping-item">
+                    <img src="../IMAGES/icono.png" alt="" width="80px">
+                    <div class="shipping-item-details">
+                        <span class="shipping-item-tittle">2 Item</span>
+                        <div class="selector-quantity">
+                            <i class="fa fa-minus subtract-amount"></i>
+                            <input type="text" value="2" class="shipping-item-quantity" disabled>
+                            <i class="fa fa-plus add-quantity"></i>
+                        </div>
+                        <span class="shipping-item-price">$35.000</span>
+                    </div>
+                    <span class="btn-eliminate">
+                        <i class="fa fa-trash eliminate"></i>
+                    </span>
+                </div>
+                <div class="shipping-item">
+                    <img src="../IMAGES/icono.png" alt="" width="80px">
+                    <div class="shipping-item-details">
+                        <span class="shipping-item-tittle">3 Item</span>
+                        <div class="selector-quantity">
+                            <i class="fa fa-minus subtract-amount"></i>
+                            <input type="text" value="1" class="shipping-item-quantity" disabled>
+                            <i class="fa fa-plus add-quantity"></i>
+                        </div>
+                        <span class="shipping-item-price">$25.000</span>
+                    </div>
+                    <span class="btn-eliminate">
+                        <i class="fa fa-trash eliminate"></i>
+                    </span>
+                </div>
+                -->
+                <!-- Productos del carrito de Ejemplo -->
+            </div>
+            <!-- Total del carrito -->
+            <div class="total-cart">
+                <div class="row">
+                    <strong>Tu Total</strong>
+                    <span class="total-cart-price">
+                        <!-- Arreglar esto -->
+                        falla
+                    </span>
+                </div>
+                <button class="btn-pay">Pagar <i class="fa fa-shopping-bag" aria-hidden="true"></i> </button>
+            </div>
+            <!-- Total del carrito -->
+        </div>
+        <!-- Carrito de Compras -->
+    </section>
+    <!-- Pie de Pagina -->
+    <footer>
+        <div class="footer-container">
+          <div class="footer-about">
+            <h3>Acerca de nosotros</h3>
+            <p>Somos una tienda de licores especializada en ofrecer las mejores marcas del mercado, con un servicio personalizado y atención al cliente de calidad.</p>
+          </div>
+          <div class="footer-contact">
+            <h3>Contacto</h3>
+            <ul>
+              <li><i class="bi bi-telephone"></i> Número: +562 74398100</li>
+              <li><i class="bi bi-envelope"></i> Correo: botillería@elbarrilselecto.cl</li>
+              <li><i class="bi bi-geo-alt"></i> Dirección: Miraflores 1032</li>
+              <li><i class="bi bi-clock"></i> Horario: Lunes a Sabado de 10:00 a 17:00 hrs.</li>
+            </ul>
+          </div>
+          <div class="footer-social">
+            <h3>Síguenos en redes sociales</h3>
+            <ul>
+              <li><a href="https://www.facebook.com/"><i class="bi bi-facebook"></i> Facebook</a></li>
+              <li><a href="https://twitter.com/?lang=es"><i class="bi bi-twitter"></i> Twitter</a></li>
+              <li><a href="https://www.instagram.com/"><i class="bi bi-instagram"></i> Instagram</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2023 Tienda de Botillería. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <!-- Pie de Pagina -->
+    <!-- Agregamos el enlace al archivo JavaScript de Bootstrap -->
+    <script src="path/to/font-awesome/js/all.min.js"></script>
+    <!-- Agregamos el enlace al archivo JavaScript de Bootstrap -->
+    <!-- Scripts para Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Scripts para Bootstrap -->
 </body>
 </html>

@@ -156,7 +156,7 @@ function agregarItemAlCarrito(titulo, precio, imagenSrc){
     var nombresItemsCarrito = itemsCarrito.getElementsByClassName('shipping-item-tittle');
     for(var i=0; i < nombresItemsCarrito.length; i++){
         if(nombresItemsCarrito[i].innerText == titulo){
-            alert();
+            alert("El producto ya se encuentra agregado al carrito");
             return;
         }
     }

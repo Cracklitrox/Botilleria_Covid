@@ -194,7 +194,7 @@ function agregarItemAlCarrito(titulo, precio, imagenSrc){
     botonRestarCantidad.addEventListener('click', restarCantidad);
 }
 
-// Funcion para 
+// Funcion para cuando el usuario realiza la compra
 function pagarClicked(event){
     alert("Gracias por su compra");
 

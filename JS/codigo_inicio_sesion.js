@@ -5,6 +5,13 @@ if (document.readyState == 'loading') {
     ready()
 }
 
+function rojo() {
+    return document.getElementById('imagen').src="../led roja.jpg"
+}
+function verde() {
+    return document.getElementById('imagen').src="../led verde.jpg"
+}
+
 // Función para realizar la validación de inicio de sesión
 function ready() {
     document.querySelector('form').addEventListener('submit', function(event) {

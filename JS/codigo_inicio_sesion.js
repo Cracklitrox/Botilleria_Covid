@@ -5,12 +5,20 @@ if (document.readyState == 'loading') {
     ready()
 }
 
+// BORRAR
+function gato_1() {
+    return document.getElementById('imagen').src="https://media.tenor.com/2io-zi4Ok6IAAAAC/cat-gato.gif"
+}
+function gato_2() {
+    return document.getElementById('imagen').src="https://i.pinimg.com/originals/72/77/19/72771935f70719c9d006e4c3f1a8320a.gif"
+}
 function rojo() {
     return document.getElementById('imagen').src="../led roja.jpg"
 }
 function verde() {
     return document.getElementById('imagen').src="../led verde.jpg"
 }
+// BORRAR
 
 // Función para realizar la validación de inicio de sesión
 function ready() {

@@ -64,25 +64,25 @@
     <!-- Elementos del formulario -->
     <div class="container" style="text-align: center;">
       <h1>Formulario de Contacto</h1>
-      <form id="contact-form,cont-formulario" method="post">
+      <form id="contact-form" method="get">
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="name">Nombre completo:</label>
-            <input type="text" class="form-control" id="name" name="nombre_completo" placeholder="Ingrese su nombre completo" required pattern="[a-zA-Z\s]+" title="Ingresa un nombre válido (solo letras y espacios)">
+            <input type="text" class="form-control" id="name"  name="nombre" placeholder="Ingrese su nombre completo" >
           </div>
           <div class="form-group col-md-6">
             <label for="email">Email:</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="Ingrese su correo con '@'" required>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Ingrese su correo con '@'" >
           </div>
         </div>
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="phone">Teléfono:</label>
-            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Ingrese su numero telefonico (9) Maximo" required pattern="[0-9]{9}" title="Ingresa un número de teléfono válido (9 dígitos)">
+            <input type="tel" class="form-control" id="phone"  name="phone" placeholder="Ingrese su numero telefonico (9) Maximo"  pattern="[0-9]{9}" >
           </div>
           <div class="form-group col-md-6">
             <label for="city">Ciudad:</label>
-            <input type="text" class="form-control" id="city" name="city" placeholder="Ingrese el nombre de su ciudad" required>
+            <input type="text" class="form-control" id="city" name="city" placeholder="Ingrese el nombre de su ciudad" >
           </div>
         </div>
         <div class="form-group">

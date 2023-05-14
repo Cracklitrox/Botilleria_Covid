@@ -68,26 +68,31 @@
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="name">Nombre completo:</label>
-          <input type="text" class="form-control" id="name"  name="nombre" placeholder="Ingrese su nombre completo" >
+          <input type="text" class="form-control" id="name"  name="name" placeholder="Ingrese su nombre completo" required pattern="[a-zA-Z\s]+" title="Ingresa un nombre válido (solo letras y espacios)">
+          <div id="name-error" style="display: none;"></div>
         </div>
         <div class="form-group col-md-6">
           <label for="email">Email:</label>
           <input type="email" class="form-control" id="email" name="email" placeholder="Ingrese su correo con '@'" >
+          <div id="email-error" style="display: none;"></div>
         </div>
       </div>
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="phone">Teléfono:</label>
           <input type="tel" class="form-control" id="phone"  name="phone" placeholder="Ingrese su numero telefonico (9) Maximo"  pattern="[0-9]{9}" >
+          <div id="phone-error" style="display: none;"></div>
         </div>
         <div class="form-group col-md-6">
           <label for="city">Ciudad:</label>
           <input type="text" class="form-control" id="city" name="city" placeholder="Ingrese el nombre de su ciudad" >
+          <div id="city-error" style="display: none;"></div>
         </div>
       </div>
       <div class="form-group">
         <label for="message">Mensaje:</label>
         <textarea class="form-control" id="message" name="message" placeholder="Ingrese su reclamación aqui" rows="5"></textarea>
+        <div id="message-error" style="display: none;"></div>
       </div>
       <button type="submit" class="btn btn-primary">Enviar</button>
     </form>
@@ -132,7 +137,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   <!-- Scripts para Bootstrap -->
   <!-- Redirecciones de las funciones de validación y traducción del texto de las validaciones -->
-  <script src="../JS/traduccion_mensajes.js"></script>
   <script src="../JS/codigo_contacto.js"></script>
+  <script src="../JS/traduccion_mensajes.js"></script>
 </body>
 </html>

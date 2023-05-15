@@ -100,6 +100,11 @@ input[type="submit"]:hover {
     box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.3);
 }
 
+/* Estilo para el color de letra al error mostrado */
+#name-error,#email-error,#password-error,#confirm_password-error {
+    color: red;
+}
+
 .input-group {
     position: relative;
     display: flex;
@@ -300,7 +305,7 @@ footer {
     color: #fff;
     padding: 50px 0;
 }
-  
+
 .footer-container {
     display: flex;
     flex-wrap: wrap;
@@ -308,69 +313,69 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
 }
-  
+
 .footer-about {
     flex-basis: 30%;
     margin-bottom: 20px;
 }
-  
+
 .footer-contact {
     flex-basis: 30%;
     margin-bottom: 20px;
 }
-  
+
 .footer-social {
     flex-basis: 30%;
     margin-bottom: 20px;
 }
-  
+
 .footer-contact ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
-  
+
 .footer-contact li {
     margin-bottom: 10px;
 }
-  
+
 .footer-social ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
-  
+
 .footer-social li {
     margin-bottom: 10px;
 }
-  
+
 .footer-social a {
     color: #fff;
     text-decoration: none;
 }
-  
+
 .footer-bottom {
     margin-top: 50px;
     text-align: center;
 }
-  
+
 .footer-bottom p {
     margin: 0;
 }
-  
+
 .footer-bottom a {
     color: #ffffff;
     text-decoration: none;
     transition: color 0.2s ease-in-out;
 }
-  
+
 .footer-bottom a:hover {
     color: #8e8e8e;
 }
-  
+
 @media only screen and (max-width: 768px) {
     footer {
-      padding-bottom: 120px;
+        padding-bottom: 120px;
     }
 }
 /* Estilos Pie de Pagina */

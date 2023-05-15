@@ -1,142 +1,207 @@
-// Espera para que todos los elementos de la página se carguen para continuar el script
-if (document.readyState == 'loading') {
-  document.addEventListener('DOMContentLoaded', ready)
-} else {
-  ready();
-}
+$("#form-register").submit(function(event) {
+  // Evita el envío del formulario por defecto
+  event.preventDefault();
 
-// Función que almacena las validaciones del formulario
-function ready() {
-  // Variables para almacenar las distintas clases del formulario
-  var formulario = document.querySelector('form');
-  var nameInput = document.querySelector('#name');
-  var emailInput = document.querySelector('#email');
-  var passwordInput = document.querySelector('#password');
-  var confirmPasswordInput = document.querySelector('#confirm-password');
-  var errorNombre = document.createElement('p');
-  var errorEmail = document.createElement('p');
-  var errorPassword = document.createElement('p');
-  var errorConfirmPassword = document.createElement('p');
-  var form = document.querySelector('form');
+  // Obtenemos los valores de cada campo a válidar
+  var name = $("#name").val();
+  var email = $("#email").val();
+  var password = $("#password").val();
+  var confirm_password = $("#confirm_password").val();
 
-  // Mensajes de error que se muestran cuando el usuario le falta algo
-  errorNombre.textContent = 'Por favor ingrese su nombre';
-  errorNombre.style.color = 'red';
-  errorEmail.textContent = 'Por favor ingrese un correo electrónico válido';
-  errorEmail.style.color = 'red';
-  errorPassword.textContent = 'Por favor ingrese una contraseña';
-  errorPassword.style.color = 'red';
-  errorConfirmPassword.textContent = 'Las contraseñas no coinciden';
-  errorConfirmPassword.style.color = 'red';
+  // Verifica si el nombre de usuario cumple con las reglas de longitud
+  if (name.length < 8 || name.length > 30) {
+    alert("Por favor, ingrese un nombre de usuario entre 8 y 30 caracteres.");
+    return;
+  }
 
-  // Evento para cuando el usuario oprime el boton de "Registrarse"
-  form.addEventListener('submit', (event) => {
-    // Detiene el envío del formulario
-    event.preventDefault();
-    
-    // Obtiene los valores de los campos del formulario
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
-    var password = document.getElementById('password').value;
-    var confirmPassword = document.getElementById('confirm-password').value;
+  // Verifica si el nombre de usuario es válido según el patrón establecido
+  if (!/^[a-zA-Z0-9_]+$/.test(name)) {
+    alert("Por favor, ingrese un nombre de usuario válido.");
+    return;
+  }
 
-    // Verifica si los campos requeridos están vacíos
-    if (!name || !email || !password || !confirmPassword) {
-      alert('Formulario incompleto, ingrese todos los campos correctamente');
-      return;
+  // Verifica si el nombre de usuario esta vacio
+  if (name.trim() === "") {
+    alert("Por favor, ingrese un nombre de usuario.");
+    return;
+  }
+
+  // Verifica si el correo electrónico cumple con las reglas de longitud
+  if (email.length < 10 || email.length > 40) {
+    alert("Por favor, ingrese un correo electrónico entre 10 y 40 caracteres.");
+    return;
+  }
+
+  // Verifica si el correo electrónico es válido según el patrón establecido
+  if (!/^[a-zA-Z0-9._%+-]+@(gmail|hotmail|yahoo|)[.]com|cl$/.test(email)) {
+    alert("Por favor, ingrese un correo electrónico válido.");
+    return;
+  }
+
+  // Verifica si el correo electrónico esta vacio
+  if (email.trim() === "") {
+    alert("Por favor, ingrese un correo electrónico.");
+    return;
+  }
+
+  // Verifica si la contraseña cumple con las reglas de longitud
+  if (password.length < 8 || password.length > 40) {
+    alert("Por favor, ingrese una contraseña entre 8 y 40 caracteres.");
+    return;
+  }
+
+  // Verifica si la contraseña es válido según el patrón establecido
+  if (!/^[a-zA-Z0-9\s]+$/.test(password)) {
+    alert("Por favor, ingrese una contraseña válida.");
+    return;
+  }
+
+  // Verifica si la contraseña esta vacio
+  if (password.trim() === "") {
+    alert("Por favor, ingrese una contraseña.");
+    return;
+  }
+
+  // Verifica si el confirmar contraseña cumple con las reglas de longitud
+  if (confirm_password.length < 8 || confirm_password.length > 40) {
+    alert("Por favor, ingrese una contraseña entre 8 y 40 caracteres.");
+    return;
+  }
+
+  // Verifica si el confirmar contraseña es válido según el patrón establecido
+  if (!/^[a-zA-Z0-9\s]+$/.test(confirm_password)) {
+    alert("Por favor, ingrese una contraseña válida.");
+    return;
+  }
+
+  // Verifica si el confirmar contraseña esta vacio
+  if (confirm_password.trim() === "") {
+    alert("Por favor, ingrese una contraseña.");
+    return;
+  }
+
+  // Verifica si el confirmar contraseña ingresada es igual a la contraseña
+  if (confirm_password !== password) {
+    alert("Las contraseñas no coinciden.");
+    return;
+  };
+
+  // Si los campos son validos, envía el formulario
+  alert("El formulario se ha enviado correctamente.");
+  this.submit();
+});
+
+// Mostrar mensaje de error de name
+$("#name").on("invalid", function(event) {
+  event.preventDefault();
+  $("#name-error").text("Por favor, ingrese un nombre de usuario válido.");
+  $("#name-error").show();
+});
+
+// Mostrar mensaje de error de email
+$("#email").on("invalid", function(event) {
+  event.preventDefault();
+  $("#email-error").text("Por favor, ingrese un correo electrónico válido.");
+  $("#email-error").show();
+});
+
+// Mostrar mensaje de error de password
+$("#password").on("invalid", function(event) {
+  event.preventDefault();
+  $("#password-error").text("Por favor, ingrese una contraseña válida.");
+  $("#password-error").show();
+});
+
+// Mostrar mensaje de error de password
+$("#confirm_password").on("invalid", function(event) {
+  event.preventDefault();
+  $("#confirm_password-error").text("Por favor, ingrese una contraseña válida.");
+  $("#confirm_password-error").show();
+});
+
+// Ocultar mensaje de error al corregir el nombre
+$("#name").on("input", function() {
+  if ($("#name")[0].checkValidity()) {
+      $("#name-error").hide();
+  }
+});
+
+// Ocultar mensaje de error al corregir el nombre
+$("#email").on("input", function() {
+  if ($("#email")[0].checkValidity()) {
+      $("#email-error").hide();
+  }
+});
+
+// Ocultar mensaje de error al corregir el nombre
+$("#password").on("input", function() {
+  if ($("#password")[0].checkValidity()) {
+      $("#password-error").hide();
+  }
+});
+
+// Ocultar mensaje de error al corregir el nombre
+$("#confirm_password").on("input", function() {
+  if ($("#confirm_password")[0].checkValidity()) {
+      $("#confirm_password-error").hide();
+  }
+});
+
+$("#form-register").validate({
+  rules: {
+    name: {
+      required: true,
+      minlength: 8,
+      maxlength: 30,
+      pattern: /^[a-zA-Z0-9_]+$/
+    },
+    email: {
+      required: true,
+      minlength: 10,
+      maxlength: 40,
+      pattern: /^[a-zA-Z0-9._%+-]+@(gmail|hotmail|yahoo|)[.]com|cl$/
+    },
+    password: {
+      required: true,
+      minlength: 8,
+      maxlength: 40,
+      pattern: /^[a-zA-Z0-9\s]+$/
+    },
+    confirm_password: {
+      required: true,
+      minlength: 8,
+      maxlength: 40,
+      pattern: /^[a-zA-Z0-9\s]+$/
     }
-
-    // Verifica si las contraseñas coinciden
-    if (password !== confirmPassword) {
-      alert('Las contraseñas no coinciden');
-      return;
+  },
+  messages: {
+    name: {
+      required: "Por favor, ingrese su nombre de usuario completo",
+      minlength: "El nombre de usuario debe tener al menos 8 caracteres",
+      maxlength: "El nombre de usuario no puede tener más de 30 caracteres",
+      pattern: "El nombre solo puede contener letras, números y guines bajos"
+    },
+    email: {
+      required: "Por favor, ingrese su correo electrónico completo",
+      minlength: "El correo electrónico debe tener al menos 10 caracteres",
+      maxlength: "El correo electrónico no puede tener más de 40 caracteres",
+      pattern: "El correo electrónico solo puede contener letras, espacios, acentos, letras y números"
+    },
+    password: {
+      required: "Por favor, ingrese su contraseña completa",
+      minlength: "La contraseña debe tener al menos 8 caracteres",
+      maxlength: "La contraseña no puede tener más de 40 caracteres",
+      pattern: "La contraseña solo puede contener letras y números"
+    },
+    confirm_password: {
+      required: "Por favor, ingrese su contraseña completa",
+      minlength: "La contraseña debe tener al menos 8 caracteres",
+      maxlength: "La contraseña no puede tener más de 40 caracteres",
+      pattern: "La contraseña solo puede contener letras y números"
     }
-
-    // Verifica si el correo electrónico es válido
-    if (!validateEmail(email)) {
-      alert('Ingrese un correo electrónico válido');
-      return;
-    }
-
-    // Si el formulario es válido, suelta una alerta y redirige al usuario a la página de inicio
-    alert('Registrado correctamente');
-    window.location.href = "../index.html";
-  });
-
-  // Muestra el mensaje de error con un color rojo para el nombre
-  nameInput.addEventListener('input', () => {
-    if (nameInput.validity.valid) {
-      errorNombre.remove();
-      nameInput.style.border = 'none';
-    } else {
-      formulario.appendChild(errorNombre);
-      nameInput.style.border = '2px solid red';
-    }
-  });
-
-  // Muestra el mensaje de error con un color rojo para el correo
-  emailInput.addEventListener('input', () => {
-    if (emailInput.validity.valid) {
-      errorEmail.remove();
-      emailInput.style.border = 'none';
-    } else {
-      formulario.appendChild(errorEmail);
-      emailInput.style.border = '2px solid red';
-    }
-  });
-
-  // Muestra el mensaje de error con un color rojo para la contraseña
-  passwordInput.addEventListener('input', () => {
-    if (passwordInput.validity.valid) {
-      errorPassword.remove();
-      passwordInput.style.border = 'none';
-    } else {
-      formulario.appendChild(errorPassword);
-      passwordInput.style.border = '2px solid red';
-    }
-  });
-
-  // Muestra el mensaje de error con un color rojo para la confirmacion de la contraseña
-  confirmPasswordInput.addEventListener('input', () => {
-    if (confirmPasswordInput.value === passwordInput.value) {
-      errorConfirmPassword.remove();
-      confirmPasswordInput.style.border = 'none';
-    } else {
-      formulario.appendChild(errorConfirmPassword);
-      confirmPasswordInput.style.border = '2px solid red';
-    }
-  });
-
-  // Muestra el mensaje de error con un color rojo para el formulario
-  formulario.addEventListener('submit', (e) => {
-    if (!nameInput.validity.valid) {
-      e.preventDefault();
-      formulario.appendChild(errorNombre);
-      nameInput.style.border = '2px solid red';
-    }
-
-    if (!emailInput.validity.valid) {
-      e.preventDefault();
-      formulario.appendChild(errorEmail);
-      emailInput.style.border = '2px solid red';
-    }
-
-    if (!passwordInput.validity.valid) {
-      e.preventDefault();
-      formulario.appendChild(errorPassword);
-      passwordInput.style.border = '2px solid red';
-    }
-
-    if (confirmPasswordInput.value !== passwordInput.value) {
-      e.preventDefault();
-      formulario.appendChild(errorConfirmPassword);
-      confirmPasswordInput.style.border = '2px solid red';
-    }
-  });
-}
-
-// Función para validar el formato de un correo electrónico
-function validateEmail(email) {
-  var emailRegex = /^\S+@\S+\.\S+$/;
-  return emailRegex.test(email);
-}
+  },
+  submitHandler: function(form) {
+    alert("El formulario se ha enviado correctamente.");
+    form.submit();
+  }
+});

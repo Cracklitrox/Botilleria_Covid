@@ -1,18 +1,65 @@
-// Espera para que todos los elementos de la página se carguen para continuar el script
-if(document.readyState =='loading'){
-  document.addEventListener('DOMContentLoaded', ready)
-}else{
-  ready();
-}
+$("#form-restore-password").submit(function(event) {
+  // Evita el envío del formulario por defecto
+  event.preventDefault();
 
-// Función para mostrar mensaje de confirmacion del ingreso correcto del email
-function ready() {
-  const form = document.getElementById("contact-form");
-  form.addEventListener("submit", function(event) {
-    event.preventDefault();
-    alert("Se ha enviado el enlace de restablecimiento a su correo");
+  var email = $("#email").val();
 
-    // Resetea los valores del formulario
-    form.reset();
-  });
-}
+  // Verifica si el correo electrónico cumple con las reglas de longitud
+  if (email.length < 10 || email.length > 40) {
+    alert("Por favor, ingrese un correo electrónico entre 10 y 40 caracteres.");
+    return;
+  }
+
+  // Verifica si el correo electrónico es válido según el patrón establecido
+  if (!/^[a-zA-Z0-9._%+-]+@(gmail|hotmail|yahoo|)[.]com|cl$/.test(email)) {
+    alert("Por favor, ingrese un correo electrónico válido.");
+    return;
+  }
+
+  // Verifica si el correo electrónico esta vacio
+  if (email.trim() === "") {
+    alert("Por favor, ingrese un correo electrónico.");
+    return;
+  }
+
+  // Si los campos son validos, envía el formulario
+  alert("El formulario se ha enviado correctamente.");
+  this.submit();
+});
+
+// Mostrar mensaje de error de email
+$("#email").on("invalid", function(event) {
+  event.preventDefault();
+  $("#email-error").text("Por favor, ingrese un correo electrónico válido.");
+  $("#email-error").show();
+});
+
+// Ocultar mensaje de error al corregir el nombre
+$("#email").on("input", function() {
+  if ($("#email")[0].checkValidity()) {
+      $("#email-error").hide();
+  }
+});
+
+$("#form-restore-password").validate({
+  rules: {
+    email: {
+      required: true,
+      minlength: 10,
+      maxlength: 40,
+      pattern: /^[a-zA-Z0-9._%+-]+@(gmail|hotmail|yahoo|)[.]com|cl$/
+    }
+  },
+  messages: {
+    email: {
+      required: "Por favor, ingrese su correo electrónico completo",
+      minlength: "El correo electrónico debe tener al menos 10 caracteres",
+      maxlength: "El correo electrónico no puede tener más de 40 caracteres",
+      pattern: "El correo electrónico solo puede contener letras, espacios, acentos, letras y números"
+    }
+  },
+  submitHandler: function(form) {
+    alert("El formulario se ha enviado correctamente.");
+    form.submit();
+  }
+});

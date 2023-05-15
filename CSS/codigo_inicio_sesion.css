@@ -76,7 +76,7 @@ label {
     box-shadow: 0 0 0 3px rgba(3, 102, 214, 0.3);
 }
 
-input[type="text"],input[type="password"],input[type="submit"] {
+input[type="text"],input[type="password"],button[type="submit"] {
     border: 1px solid #d1d5da;
     border-radius: 3px;
     font-size: 16px;
@@ -89,15 +89,15 @@ input[type="text"],input[type="password"] {
     height: 44px;
 }
 
-input[type="submit"] {
+button[type="submit"] {
     background-color: #28a745;
     border-color: #28a745;
     color: #fff;
     cursor: pointer;
 }
 
-input[type="submit"]:hover {
-    background-color: #269f42;
+button[type="submit"]:hover {
+    background-color: #34c656;
 }
 
 .input-group {
@@ -172,6 +172,11 @@ input[type="submit"]:hover {
     margin-top: 16px;
 }
 /* Estilos para etiquetas */
+
+/* Estilo para el color de letra al error mostrado */
+#login_field-error,#password-error {
+    color: red;
+}
 
 /* Estilo del boton enviar */
 .btn-primary {
@@ -317,7 +322,7 @@ footer {
     color: #fff;
     padding: 50px 0;
 }
-  
+
 .footer-container {
     display: flex;
     flex-wrap: wrap;
@@ -325,17 +330,17 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
 }
-  
+
 .footer-about {
     flex-basis: 30%;
     margin-bottom: 20px;
 }
-  
+
 .footer-contact {
     flex-basis: 30%;
     margin-bottom: 20px;
 }
-  
+
 .footer-social {
     flex-basis: 30%;
     margin-bottom: 20px;
@@ -346,48 +351,48 @@ footer {
     margin: 0;
     padding: 0;
 }
-  
+
 .footer-contact li {
     margin-bottom: 10px;
 }
-  
+
 .footer-social ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
-  
+
 .footer-social li {
     margin-bottom: 10px;
 }
-  
+
 .footer-social a {
     color: #fff;
     text-decoration: none;
 }
-  
+
 .footer-bottom {
     margin-top: 50px;
     text-align: center;
 }
-  
+
 .footer-bottom p {
     margin: 0;
 }
-  
+
 .footer-bottom a {
     color: #ffffff;
     text-decoration: none;
     transition: color 0.2s ease-in-out;
 }
-  
+
 .footer-bottom a:hover {
     color: #8e8e8e;
 }
-  
+
 @media only screen and (max-width: 768px) {
     footer {
-      padding-bottom: 120px;
+        padding-bottom: 120px;
     }
 }
 /* Estilos Pie de Pagina */

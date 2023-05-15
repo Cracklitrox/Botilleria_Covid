@@ -1,34 +1,111 @@
-// Espera para que todos los elementos de la página se carguen para continuar el script
-if (document.readyState == 'loading') {
-    document.addEventListener('DOMContentLoaded', ready)
-} else {
-    ready()
-}
+$("#form-login").submit(function(event) {
+    // Evita el envío del formulario por defecto
+    event.preventDefault();
 
-// Función para realizar la validación de inicio de sesión
-function ready() {
-    document.querySelector('form').addEventListener('submit', function(event) {
-         // Prevenir el comportamiento predeterminado del formulario
-        event.preventDefault();
+    // Obtenemos los valores de cada campo a válidar
+    var login_field = $("#login_field").val();
+    var password = $("#password").val();
 
-        // Obtener los valores ingresados en los campos de usuario y contraseña
-        const usernameOrEmail = document.getElementById('login_field').value;
-        const password = document.getElementById('password').value;
+    // Verifica si el nombre de usuario cumple con las reglas de longitud
+    if (login_field.length < 8 || login_field.length > 30) {
+        alert("Por favor, ingrese un nombre de usuario entre 8 y 30 caracteres.");
+        return;
+    }
 
-        // Realizar la validación de los datos de inicio de sesión
-        // Datos creados por el programador.
-        if ((usernameOrEmail === 'Usuario1' || usernameOrEmail === 'correo_usuario1@gmail.com') && password === 'contraseña_usuario1') {
-            const username = usernameOrEmail === 'Usuario1' ? 'Usuario1' : 'Usuario';
-            // Mensaje para el usuario
-            alert(`Bienvenido ${username} a El Barril Selecto`);
-             // Redirigir a la página de inicio
-            window.location.href = '../index.html';
-        } else {
-            alert('Usuario o contraseña incorrectos. Por favor, inténtelo de nuevo.');
+    // Verifica si el nombre de usuario es válido según el patrón establecido
+    if (!/^[a-zA-Z0-9_]+$/.test(login_field)) {
+        alert("Por favor, ingrese un nombre de usuario válido.");
+        return;
+    }
+    
+    // Verifica si el nombre de usuario esta vacio
+    if (login_field.trim() === "") {
+        alert("Por favor, ingrese un nombre de usuario.");
+        return;
+    }
+
+    // Verifica si la contraseña cumple con la longitud mínima y máxima establecidas
+    if (password.length < 8 || password.length > 40) {
+        alert("Por favor, ingrese una contraseña que tenga entre 8 y 40 caracteres.");
+        return;
+    }
+
+    // Verifica si la contraseña es válido según el patrón establecido
+    if (!/^[a-zA-Z0-9\s]+$/.test(password)) {
+        alert("Por favor, ingrese una contraseña válida.");
+        return;
+    }
+
+    // Verifica si el campo está vacío
+    if (password.trim() === "") {
+        alert("Por favor, ingrese su contraseña.");
+        return;
+    }
+
+    // Si los campos son validos, envía el formulario
+    alert("El formulario se ha enviado correctamente.");
+    this.submit();
+});
+
+// Mostrar mensaje de error de name
+$("#login_field").on("invalid", function(event) {
+    event.preventDefault();
+    $("#login_field-error").text("Por favor, ingrese un nombre de usuario válido.");
+    $("#login_field-error").show();
+});
+
+// Mostrar mensaje de error de name
+$("#password").on("invalid", function(event) {
+    event.preventDefault();
+    $("#password-error").text("Por favor, ingrese una contraseña válida.");
+    $("#password-error").show();
+});
+
+// Ocultar mensaje de error al corregir el nombre
+$("#login_field").on("input", function() {
+    if ($("#login_field")[0].checkValidity()) {
+        $("#login_field-error").hide();
+    }
+});
+
+// Ocultar mensaje de error al corregir el nombre
+$("#password").on("input", function() {
+    if ($("#password")[0].checkValidity()) {
+        $("#password-error").hide();
+    }
+});
+
+$("#form-login").validate({
+    rules: {
+        login_field: {
+            required: true,
+            minlength: 8,
+            maxlength: 30,
+            pattern: /^[a-zA-Z0-9_]+$/
+        },
+        password: {
+            required: true,
+            minlength: 8,
+            maxlength: 40,
+            pattern: /^[a-zA-Z0-9\s]+$/
         }
-
-        // Limpiar los campos de usuario y contraseña
-        document.getElementById('login_field').value = '';
-        document.getElementById('password').value = '';
-    });
-}
+    },
+    messages: {
+        login_field: {
+            required: "Por favor, ingrese su nombre de usuario completo",
+            minlength: "El nombre de usuario debe tener al menos 8 caracteres",
+            maxlength: "El nombre de usuario no puede tener más de 30 caracteres",
+            pattern: "El nombre solo puede contener letras, números y guines bajos"
+        },
+        password: {
+            required: "Por favor, ingrese su contraseña de usuario",
+            minlength: "La contraseña debe tener al menos 8 caracteres",
+            maxlength: "La contraseña no puede tener más de 40 caracteres",
+            pattern: "La contraseña solo puede contener letras, espacios y números"
+        }
+    },
+    submitHandler: function(form) {
+        alert("El formulario se ha enviado correctamente.");
+        form.submit();
+    }
+});

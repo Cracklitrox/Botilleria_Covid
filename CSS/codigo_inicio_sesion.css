@@ -5,7 +5,13 @@
     box-sizing: border-box;
 }
 /* Aplicar estilos a todas las clases */
-
+.dropdown-arrow {
+    width: 0;
+    height: 0;
+    border-top: 5px solid;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+  }
 /* Estilos personalizados */
 body {
     background: linear-gradient(to right, #3e5151, #decba4);

@@ -46,7 +46,6 @@ $("#form-login").submit(function(event) {
     alert("El formulario se ha enviado correctamente.");
     this.submit();
 });
-
 // Mostrar mensaje de error de name
 $("#login_field").on("invalid", function(event) {
     event.preventDefault();

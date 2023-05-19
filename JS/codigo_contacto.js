@@ -11,7 +11,7 @@ $("#contact-form").submit(function(event) {
 
   // Verifica si el nombre de usuario cumple con las reglas de longitud
   if (name.length < 8 || name.length > 30) {
-    alert("Por favor, ingrese un nombre de usuario entre 8 y 30 caracteres.");
+    alert("Por favor, ingrese un nombre entre 8 y 30 caracteres.");
     return;
   }
   
@@ -23,7 +23,7 @@ $("#contact-form").submit(function(event) {
 
   // Verifica si el nombre de usuario esta vacio
   if (name.trim() === "") {
-    alert("Por favor, ingrese un nombre de usuario.");
+    alert("Por favor, ingrese un nombre completo.");
     return;
   }
 
@@ -102,41 +102,6 @@ $("#contact-form").submit(function(event) {
   // Si los campos son validos, envía el formulario
   alert("El formulario se ha enviado correctamente.");
   this.submit();
-});
-
-// Mostrar mensaje de error de name
-$("#name").on("invalid", function(event) {
-  event.preventDefault();
-  $("#name-error").text("Por favor, ingrese un nombre válido.");
-  $("#name-error").show();
-});
-
-// Mostrar mensaje de error de email
-$("#email").on("invalid", function(event) {
-  event.preventDefault();
-  $("#email-error").text("Por favor, ingrese un correo electrónico válido.");
-  $("#email-error").show();
-});
-
-// Mostrar mensaje de error de email
-$("#phone").on("invalid", function(event) {
-  event.preventDefault();
-  $("#phone-error").text("Por favor, ingrese un número teléfonico válido.");
-  $("#phone-error").show();
-});
-
-// Mostrar mensaje de error de city
-$("#city").on("invalid", function(event) {
-  event.preventDefault();
-  $("#city-error").text("Por favor, ingrese una ciudad válida.");
-  $("#city-error").show();
-});
-
-// Mostrar mensaje de error de message
-$("#message").on("invalid", function(event) {
-  event.preventDefault();
-  $("#message-error").text("Por favor, ingrese un mensaje.");
-  $("#message-error").show();
 });
 
 // Ocultar mensaje de error al corregir el nombre

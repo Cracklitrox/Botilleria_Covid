@@ -27,13 +27,6 @@ $("#form-restore-password").submit(function(event) {
   this.submit();
 });
 
-// Mostrar mensaje de error de email
-$("#email").on("invalid", function(event) {
-  event.preventDefault();
-  $("#email-error").text("Por favor, ingrese un correo electrónico válido.");
-  $("#email-error").show();
-});
-
 // Ocultar mensaje de error al corregir el nombre
 $("#email").on("input", function() {
   if ($("#email")[0].checkValidity()) {

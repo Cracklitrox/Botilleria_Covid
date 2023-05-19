@@ -46,19 +46,6 @@ $("#form-login").submit(function(event) {
     alert("El formulario se ha enviado correctamente.");
     this.submit();
 });
-// Mostrar mensaje de error de name
-$("#login_field").on("invalid", function(event) {
-    event.preventDefault();
-    $("#login_field-error").text("Por favor, ingrese un nombre de usuario válido.");
-    $("#login_field-error").show();
-});
-
-// Mostrar mensaje de error de name
-$("#password").on("invalid", function(event) {
-    event.preventDefault();
-    $("#password-error").text("Por favor, ingrese una contraseña válida.");
-    $("#password-error").show();
-});
 
 // Ocultar mensaje de error al corregir el nombre
 $("#login_field").on("input", function() {
@@ -94,7 +81,7 @@ $("#form-login").validate({
             required: "Por favor, ingrese su nombre de usuario completo",
             minlength: "El nombre de usuario debe tener al menos 8 caracteres",
             maxlength: "El nombre de usuario no puede tener más de 30 caracteres",
-            pattern: "El nombre solo puede contener letras, números y guines bajos"
+            pattern: "El nombre de usuario solo puede contener letras, números y guines bajos"
         },
         password: {
             required: "Por favor, ingrese su contraseña de usuario",

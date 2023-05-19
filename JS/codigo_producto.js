@@ -141,6 +141,7 @@ function agregarAlCarritoClicked(event){
 
     // La siguiente funcion agregara el elemento al carrito. Por lo tanto se mandara por parametro los valores.
     agregarItemAlCarrito(titulo, precio, imagenSrc);
+    actualizarTotalCarrito();
 
     // Llamamos a la funcion para hacer visible el carrito cuando agregamos un producto por primera vez
     hacerVicibleCarrito();

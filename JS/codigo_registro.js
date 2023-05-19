@@ -91,34 +91,6 @@ $("#form-register").submit(function(event) {
   this.submit();
 });
 
-// Mostrar mensaje de error de name
-$("#name").on("invalid", function(event) {
-  event.preventDefault();
-  $("#name-error").text("Por favor, ingrese un nombre de usuario válido.");
-  $("#name-error").show();
-});
-
-// Mostrar mensaje de error de email
-$("#email").on("invalid", function(event) {
-  event.preventDefault();
-  $("#email-error").text("Por favor, ingrese un correo electrónico válido.");
-  $("#email-error").show();
-});
-
-// Mostrar mensaje de error de password
-$("#password").on("invalid", function(event) {
-  event.preventDefault();
-  $("#password-error").text("Por favor, ingrese una contraseña válida.");
-  $("#password-error").show();
-});
-
-// Mostrar mensaje de error de password
-$("#confirm_password").on("invalid", function(event) {
-  event.preventDefault();
-  $("#confirm_password-error").text("Por favor, ingrese una contraseña válida.");
-  $("#confirm_password-error").show();
-});
-
 // Ocultar mensaje de error al corregir el nombre
 $("#name").on("input", function() {
   if ($("#name")[0].checkValidity()) {
@@ -179,7 +151,7 @@ $("#form-register").validate({
       required: "Por favor, ingrese su nombre de usuario completo",
       minlength: "El nombre de usuario debe tener al menos 8 caracteres",
       maxlength: "El nombre de usuario no puede tener más de 30 caracteres",
-      pattern: "El nombre solo puede contener letras, números y guines bajos"
+      pattern: "El nombre de usuario solo puede contener letras, números y guiones bajos"
     },
     email: {
       required: "Por favor, ingrese su correo electrónico completo",
